@@ -1,0 +1,22 @@
+plugins {
+  id 'java'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url "https://oss.sonatype.org/content/repositories/snapshots/"
+  }
+}
+
+def vertx_version = '3.5.0-SNAPSHOT'
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+  testCompile "io.vertx:vertx-unit:$vertx_version"
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.1'
+}
