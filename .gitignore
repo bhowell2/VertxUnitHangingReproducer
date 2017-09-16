@@ -1,3 +1,5 @@
 .idea/
 *.iml
-build/
+build/classes/
+build/tmp/
+build/test-results/
